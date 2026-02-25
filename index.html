@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <h2 class="brand-title">MyPortfolio</h2>
+  <div class="link-container">
+    <a class="link" href="#Home">Home</a>
+    <a class="link" href="#About">About</a>
+    <a class="link" href="#Project">Project</a>
+    <a class="link" href="#Contact">Contact</a>
+  </div>
+</nav>
+
+<div class="stars"></div>
+
+<header id="Home" class="reveal">
+  <img src="nat.jpg" class="profile">
+  <h1>QUINONES, ROBERT NATHANIEL L.</h1>
+  <p class="subtitle">Computer Science Student | Web Developer</p>
+</header>
+
+<section id="About" class="reveal">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am a passionate Computer Science student focused on web development, UI design, and modern technologies.
+      I enjoy building responsive and interactive websites that solve real-world problems.
+    </p>
+  </div>
+</section>
+
+<section id="Project" class="reveal">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card" onclick="openPortfolio()">Portfolio Web System and technologies</div>
+    <div class="card" onclick="openML()">Machine Learning</div>
+    <div class="card" onclick="openGallery()">4WD Robot Arm Project</div>
+    <div class="card" onclick="openMM()">Multi Media</div>
+   
+  </div>
+</section>
+
+<section id="Contact" class="contact-container">
+  <h2>Contacts</h2>
+  <div class="grid">
+    <div class="box">Email: rquinones@ssct.edu.ph</div>
+    <div class="box">Contacts: 09666676066</div>
+  </div>
+</section>
+<div id="webModal" class="modal">
+  <span class="close" onclick="closeWeb()">&times;</span>
+  <div class="modal-content">
+    <img src="web1.png"onclick="zoomImage(this)">
+    <img src="web2.png"onclick="zoomImage(this)">
+    <img src="web3.png"onclick="zoomImage(this)">
+  </div>
+</div>
+<!--multimedia-->
+<div id="multiModal" class="modal">
+  <span class="close" onclick="closeMM()">&times;</span>
+  <div class="modal-content">
+    <img src="multi1.png">
+    <img src="multi2.png">
+    <img src="multi3.png">
+  </div>
+</div>
+<!--machine learning-->
+<div id="mlModal" class="modal">
+  <span class="close" onclick="closeML()">&times;</span>
+  <div class="modal-content">
+    <img src="ml1.png" onclick="zoomImage(this)">
+    <img src="ml2.png" onclick="zoomImage(this)">
+    <img src="ml3.png" onclick="zoomImage(this)">
+    <img src="ml4.png" onclick="zoomImage(this)">
+    <img src="ml5.png" onclick="zoomImage(this)">
+    <img src="ml6.png" onclick="zoomImage(this)">
+    <img src="ml7.png" onclick="zoomImage(this)">
+  </div>  
+</div>
+<div id="zoomModal" class="modal">
+  <span class="close" onclick="closeZoom()">&times;</span>
+  <img id="zoomedImg" class="zoomed">
+</div>
+
+<!-- GALLERY POPUP -->
+<div id="galleryModal" class="modal">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <div class="modal-content">
+    <img src="4wdarmrobot.jpg">
+    <img src="embedded.jpg">
+    <img src="group.jpg">
+  </div>
+</div>
+
+<footer>
+  © 2026 QUINONES, ROBERT NATHANIEL | Portfolio
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
