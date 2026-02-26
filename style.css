@@ -1,51 +1,278 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#0b0f1a;color:white;overflow-x:hidden}
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI,sans-serif;
+}
 
-/* loader */
-#loader{position:fixed;width:100%;height:100%;background:#0b0f1a;display:flex;justify-content:center;align-items:center;z-index:2000;transition:1s}
-#loader.hide{opacity:0;visibility:hidden}
+html{
+  scroll-behavior:smooth;
+}
 
-/* stars */
-.stars{position:fixed;width:100%;height:100%;background:transparent url('https://www.transparenttextures.com/patterns/stardust.png');animation:moveStars 120s linear infinite;z-index:-1;opacity:.5}
-@keyframes moveStars{from{background-position:0 0}to{background-position:10000px 5000px}}
+body{
+  background:#0b0f1a;
+  color:white;
+  overflow-x:hidden;
+}
 
-/* nav */
-.nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:15px 40px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);z-index:999}
-.nav a{margin-left:25px;text-decoration:none;color:white;font-weight:600}
-.nav a:hover{color:#00e5ff}
-.theme-btn{margin-left:20px;padding:6px 12px;border:none;border-radius:8px;cursor:pointer}
+/* ===== LOADER ===== */
+#loader{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:#0b0f1a;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+  transition:1s;
+}
 
-/* hero */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:space-between;padding:120px 10%;gap:40px}
-.hero img{width:260px;border-radius:50%;border:4px solid #00e5ff;box-shadow:0 0 30px rgba(0,229,255,.6)}
-.role{color:#00e5ff;margin:10px 0}
-.btn{display:inline-block;margin-top:20px;padding:12px 26px;border-radius:30px;background:#00e5ff;color:#000;text-decoration:none;font-weight:bold}
+#loader.hide{
+  opacity:0;
+  visibility:hidden;
+}
 
-section{padding:100px 10%;max-width:1100px;margin:auto}
-h2{text-align:center;margin-bottom:40px;color:#00e5ff}
+/* ===== STARS BACKGROUND ===== */
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:transparent url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation:moveStars 120s linear infinite;
+  z-index:-1;
+  opacity:.5;
+}
 
-.about-box{background:#11182a;padding:40px;border-radius:20px;text-align:center}
+@keyframes moveStars{
+  from{background-position:0 0}
+  to{background-position:10000px 5000px}
+}
 
-/* project grid */
-.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
-.project-card{position:relative;overflow:hidden;border-radius:16px}
-.project-card img{width:100%;height:220px;object-fit:cover;transition:.5s}
-.project-card:hover img{transform:scale(1.1)}
-.overlay{position:absolute;bottom:0;width:100%;padding:15px;background:linear-gradient(transparent,rgba(0,0,0,.9));text-align:center;font-weight:bold}
+/* ===== NAVBAR (GLASS STYLE) ===== */
+.nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 40px;
+  background:rgba(10,14,25,.55);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+  z-index:999;
+}
 
-/* skills */
-.skill{max-width:600px;margin:auto}
-.bar{background:#1b233a;height:12px;border-radius:20px;margin:10px 0 25px;overflow:hidden}
-.bar span{display:block;height:100%;background:#00e5ff}
+.nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+  position:relative;
+}
 
-/* contact */
-.contact-card{max-width:400px;margin:auto;background:#11182a;padding:40px;border-radius:20px;text-align:center}
+/* underline animation */
+.nav a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:#00e5ff;
+  transition:.3s;
+}
 
-footer{text-align:center;padding:40px;color:#aaa}
+.nav a:hover::after{
+  width:100%;
+}
 
-.reveal{opacity:0;transform:translateY(40px);transition:.8s}
-.reveal.active{opacity:1;transform:translateY(0)}
+.nav a:hover{
+  color:#00e5ff;
+}
 
-.light{background:#f4f6fb;color:#111}
-.light .about-box,.light .contact-card{background:white;color:#111}
+.theme-btn{
+  margin-left:20px;
+  padding:6px 12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 10%;
+  gap:40px;
+}
+
+.hero img{
+  width:260px;
+  border-radius:50%;
+  border:4px solid #00e5ff;
+  box-shadow:0 0 30px rgba(0,229,255,.6);
+}
+
+.role{
+  color:#00e5ff;
+  margin:10px 0;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 26px;
+  border-radius:30px;
+  background:#00e5ff;
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 18px rgba(0,229,255,.6);
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:100px 10%;
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:40px;
+  color:#00e5ff;
+}
+
+/* ===== ABOUT ===== */
+.about-box{
+  background:#11182a;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 0 20px rgba(0,229,255,.1);
+}
+
+/* ===== PROJECT GRID ===== */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+.project-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  transition:.4s;
+  box-shadow:0 0 0 rgba(0,229,255,0);
+}
+
+.project-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 25px rgba(0,229,255,.35);
+}
+
+.project-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.project-card:hover img{
+  transform:scale(1.1);
+}
+
+.overlay{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:15px;
+  background:linear-gradient(transparent,rgba(0,0,0,.9));
+  text-align:center;
+  font-weight:bold;
+}
+
+/* ===== SKILLS ===== */
+.skill{
+  max-width:600px;
+  margin:auto;
+}
+
+.bar{
+  background:#1b233a;
+  height:12px;
+  border-radius:20px;
+  margin:10px 0 25px;
+  overflow:hidden;
+}
+
+.bar span{
+  display:block;
+  height:100%;
+  background:#00e5ff;
+}
+
+/* ===== CONTACT ===== */
+.contact-card{
+  max-width:400px;
+  margin:auto;
+  background:#11182a;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 0 20px rgba(0,229,255,.1);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#aaa;
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== LIGHT MODE ===== */
+.light{
+  background:#f4f6fb;
+  color:#111;
+}
+
+.light .about-box,
+.light .contact-card{
+  background:white;
+  color:#111;
+}
+
+/* ===== MOBILE HERO FIX ===== */
+@media(max-width:900px){
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:160px;
+  }
+
+  .hero img{
+    width:180px;
+  }
+}
