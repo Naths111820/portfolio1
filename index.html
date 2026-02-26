@@ -1,112 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robert Quinones Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-  <h2 class="brand-title">MyPortfolio</h2>
-  <div class="link-container">
-    <a class="link" href="#Home">Home</a>
-    <a class="link" href="#About">About</a>
-    <a class="link" href="#Project">Project</a>
-    <a class="link" href="#Contact">Contact</a>
+<div id="loader"><h1>Loading Portfolio...</h1></div>
+<div class="stars"></div>
+
+<nav class="nav">
+  <div><b>R.N.Q</b></div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-btn" onclick="toggleTheme()">☀️</button>
   </div>
 </nav>
 
-<div class="stars"></div>
+<section id="home" class="hero reveal">
+  <div>
+    <h1>Robert Nathaniel Quinones</h1>
+    <p class="role"><span id="typing"></span></p>
+    <p>Purok 6 Diatagon Lianga, Surigao Del Sur</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+  <img src="nat.jpg">
+</section>
 
-<header id="Home" class="reveal">
-  <img src="nat.jpg" class="profile">
-  <h1>QUINONES, ROBERT NATHANIEL L.</h1>
-  <p class="subtitle">Computer Science Student | Studying to be a Web Developer</p>
-</header>
-
-<section id="About" class="reveal">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-     I am a passionate Computer Science student dedicated to learning and improving my technical skills.
+<section id="about" class="reveal">
+<h2>About Me</h2>
+<div class="about-box">
+<p> I am a passionate Computer Science student dedicated to learning and improving my technical skills.
     I am focused on my studies and continuously exploring new technologies to strengthen my knowledge in programming and web development. 
       My goal is to become a professional web developer who can build responsive, user-friendly, and efficient web applications while contributing to 
-      innovative and impactful projects.        
-    </p>
-  </div>
+      innovative and impactful projects. </p>
+</div>
 </section>
 
-<section id="Project" class="reveal">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card" onclick="openPortfolio()">Portfolio Web System and technologies</div>
-    <div class="card" onclick="openML()">Machine Learning</div>
-    <div class="card" onclick="openGallery()">4WD Robot Arm Project</div>
-    <div class="card" onclick="openMM()">Multi Media</div>
-   
-  </div>
-</section>
+<section id="projects" class="reveal">
+<h2>Projects</h2>
+<div class="project-grid">
 
-<section id="Contact" class="contact-container">
-  <h2>Contacts</h2>
-  <div class="grid">
-    <div class="box">Email: rquinones@ssct.edu.ph</div>
-    <div class="box">Contacts: 09666676066</div>
+  <div class="project-card">
+    <img src="web1.png">
+    <div class="overlay">Web Systems</div>
   </div>
-</section>
-<div id="webModal" class="modal">
-  <span class="close" onclick="closeWeb()">&times;</span>
-  <div class="modal-content">
-    <img src="web1.png"onclick="zoomImage(this)">
-    <img src="web2.png"onclick="zoomImage(this)">
-    <img src="web3.png"onclick="zoomImage(this)">
-  </div>
-</div>
-<!--multimedia-->
-<div id="multiModal" class="modal">
-  <span class="close" onclick="closeMM()">&times;</span>
-  <div class="modal-content">
-    <img src="multi1.png">
-    <img src="multi2.png">
-    <img src="multi3.png">
-  </div>
-</div>
-<!--machine learning-->
-<div id="mlModal" class="modal">
-  <span class="close" onclick="closeML()">&times;</span>
-  <div class="modal-content">
-    <img src="ml1.png" onclick="zoomImage(this)">
-    <img src="ml2.png" onclick="zoomImage(this)">
-    <img src="ml3.png" onclick="zoomImage(this)">
-    <img src="ml4.png" onclick="zoomImage(this)">
-    <img src="ml5.png" onclick="zoomImage(this)">
-    <img src="ml6.png" onclick="zoomImage(this)">
-    <img src="ml7.png" onclick="zoomImage(this)">
-  </div>  
-</div>
-<div id="zoomModal" class="modal">
-  <span class="close" onclick="closeZoom()">&times;</span>
-  <img id="zoomedImg" class="zoomed">
-</div>
 
-<!-- GALLERY POPUP -->
-<div id="galleryModal" class="modal">
-  <span class="close" onclick="closeGallery()">&times;</span>
-  <div class="modal-content">
+  <div class="project-card">
+    <img src="ml1.png">
+    <div class="overlay">Machine Learning</div>
+  </div>
+
+  <div class="project-card">
     <img src="4wdarmrobot.jpg">
-    <img src="embedded.jpg">
-    <img src="group.jpg">
+    <div class="overlay">Embedded</div>
   </div>
-</div>
 
-<footer>
-  © 2026 QUINONES, ROBERT NATHANIEL | Portfolio
-</footer>
+  <div class="project-card">
+    <img src="multi1.png">
+    <div class="overlay">Multimedia</div>
+  </div>
+
+  <!-- NEW PROJECT 1 -->
+  <div class="project-card">
+    <img src="tech1.png">
+    <div class="overlay">Technopreneur</div>
+  </div>
+
+  <!-- NEW PROJECT 2 -->
+  <div class="project-card">
+    <img src="calculus 2.jpg">
+    <div class="overlay">Calculus 2</div>
+  </div>
+
+</div>
+</section>
+
+<section class="reveal">
+<h2>Skills</h2>
+<div class="skill">
+<p>HTML</p><div class="bar"><span style="width:90%"></span></div>
+<p>CSS</p><div class="bar"><span style="width:85%"></span></div>
+<p>JavaScript</p><div class="bar"><span style="width:75%"></span></div>
+<p>Python / ML</p><div class="bar"><span style="width:70%"></span></div>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<h2>Contact</h2>
+<div class="contact-card">
+<p>Email: rquinones@ssct.edu.ph</p>
+<p>Phone: 09666676066</p>
+</div>
+</section>
+
+<footer>© 2026 Robert Nathaniel Quinones | Portfolio</footer>
 
 <script src="script.js"></script>
 </body>
-
 </html>
